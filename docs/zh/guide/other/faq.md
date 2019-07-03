@@ -6,10 +6,12 @@
 
 ## vue-typescript-admin-template, vue-element-admin 和 vue-admin-template 有什么区别?
 
-vue-element-admin 是一个后台的集成方案，它囊括了很多的功能和组件，并不适合作为基础模板来进行二次开发。
-vue-admin-template 则是一个后台的基础模板脚手架，适合在它的基础上进行二次开发。
+[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) 是一个后台的集成方案，它囊括了很多的功能和组件，并不适合作为基础模板来进行二次开发。
+[vue-admin-template](https://github.com/PanJiaChen/vue-admin-template) 则是一个后台的基础模板脚手架，适合在它的基础上进行二次开发。
 
-## 首先有任何报错，最简单的方法是把报错信息复制到浏览器里面搜索一下！！！
+vue-typescript-admin-template 是基于 typescript 重写的版本, master 分支对应着 vue-element-admin 的完整功能，而 minimal 分支对应着 vue-admin-template 的基础功能。
+
+## 首先有任何报错，最简单的方法是把报错信息复制到浏览器里面搜索一下
 
 [google 点我](http://lmgtfy.com/?q=%E6%90%9C%E4%B8%80%E6%90%9C)
 
