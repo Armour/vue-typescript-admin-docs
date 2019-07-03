@@ -1,0 +1,43 @@
+{
+  "name": "vue-typescript-admin-docs",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Chong Guo <armourcy@gmail.com>",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "lint": "prettier --write 'docs/**/*.md'"
+  },
+  "devDependencies": {
+    "prettier": "1.18.2",
+    "vuepress": "1.0.2",
+    "lint-staged": "9.0.2"
+  },
+  "bugs": {
+    "url": "https://github.com/armour/vue-typescript-admin-docs/issues"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "keywords": [
+    "vue",
+    "typescript",
+    "admin",
+    "template",
+    "element-ui"
+  ],
+  "lint-staged": {
+    "*.{js,json,css,md,vue}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armour/vue-typescript-admin-docs.git"
+  }
+}
