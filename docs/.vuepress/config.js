@@ -73,7 +73,10 @@ module.exports = {
             }
           ],
           '/features/components/': getSidebarByCategory('components', 'en'),
-          '/features/pages/': getSidebarByCategory('pages', 'en')
+          '/features/pages/': getSidebarByCategory('pages', 'en'),
+          '/features/directives/': getSidebarByCategory('directives', 'en'),
+          '/features/icons/': getSidebarByCategory('icons', 'en'),
+          '/features/pwa/': getSidebarByCategory('pwa', 'en')
         }
       },
       '/zh/': {
@@ -120,7 +123,10 @@ module.exports = {
             }
           ],
           '/zh/features/components/': getSidebarByCategory('components', 'zh'),
-          '/zh/features/pages/': getSidebarByCategory('pages', 'zh')
+          '/zh/features/pages/': getSidebarByCategory('pages', 'zh'),
+          '/zh/features/directives/': getSidebarByCategory('directives', 'zh'),
+          '/zh/features/icons/': getSidebarByCategory('icons', 'zh'),
+          '/zh/features/pwa/': getSidebarByCategory('pwa', 'zh')
         }
       }
     }

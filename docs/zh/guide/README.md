@@ -13,7 +13,7 @@
 本项目使用了最新的前端技术栈，内置了 i18 国际化解决方案，动态路由，权限验证，提炼了典型的业务模型，提供了丰富的功能组件，它可以帮助你快速搭建企业级后台产品原型。相信不管你的需求是什么，本项目都能帮助到你。
 
 :::tip 建议
-本项目的默认分支 `master` 定位是后台集成方案，不太适合当基础模板来进行二次开发。因为本项目集成了很多你可能用不到的功能，会造成不少的代码冗余。如果你想移除不需要的组件，可以参考[移除未用组件](https://armour.github.io/vue-typescript-admin-docs/guide/zh/remove-unused-components)页面, 或者你可以使用位于 `minimal` 分支的简易基础模版。
+本项目的默认分支 `master` 定位是后台集成方案，不太适合当基础模板来进行二次开发。因为本项目集成了很多你可能用不到的功能，会造成不少的代码冗余。如果你想移除不需要的组件，可以参考[移除未用组件](/zh/guide/advanced/remove-unused-components)页面, 或者你可以使用位于 `minimal` 分支的简易基础模版。
 
 相关项目:
 - Javascript 集成样例: [vue-element-admin](https://github.com/armour/vue-typescript-admin-template) (鸣谢: [PanJiaChen](https://github.com/PanJiaChen))

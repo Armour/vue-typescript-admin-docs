@@ -190,17 +190,12 @@ const navbar = {
         }
       ]
     },
-    {
-      'text-en': 'Pages',
-      'text-zh': '展示页面',
-      items: [
-        {
-          'text-en': '',
-          'text-zh': '',
-          link: '/features/pages/'
-        }
-      ]
-    },
+    // {
+    //   'text-en': 'Pages',
+    //   'text-zh': '展示页面',
+    //   items: [
+    //   ]
+    // },
     {
       'text-en': 'Directives',
       'text-zh': '指令',
@@ -230,12 +225,24 @@ const navbar = {
     {
       'text-en': 'Icons',
       'text-zh': '图标',
-      link: '/features/icons'
+      items: [
+        {
+          'text-en': 'Svg Icons',
+          'text-zh': 'svg 图标',
+          link: '/features/icons/svg-icons'
+        }
+      ]
     },
     {
       'text-en': 'PWA',
       'text-zh': 'PWA',
-      link: '/features/pwa'
+      items: [
+        {
+          'text-en': 'PWA update popup',
+          'text-zh': 'PWA 自动更新弹窗',
+          link: '/features/pwa/service-worker-update-popup'
+        }
+      ]
     }
   ]
 }

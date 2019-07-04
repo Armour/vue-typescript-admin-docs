@@ -13,7 +13,7 @@
 This project is based on the newest development stack of vue, it has built-in i18n solution, dynamic routes, permission authentication, typical templates for enterprise applications, and many awesome features. It can help you to quickly build a production-ready admin panel and I believe you will find this project really helpful.
 
 :::tip
-This project integrates many features that you may not need in your own project. To remove some components that you don't need, check out [remove unused components](https://armour.github.io/vue-typescript-admin-docs/guide/remove-unused-components) page, or you can use the basic template that under [minimal](https://github.com/Armour/vue-typescript-admin-template/tree/minimal) branch.
+This project integrates many features that you may not need in your own project. To remove some components that you don't need, check out [remove unused components](/guide/advanced/remove-unused-components) page, or you can use the basic template that under [minimal](https://github.com/Armour/vue-typescript-admin-template/tree/minimal) branch.
 
 Related projects:
 - Javascript integration example: [vue-element-admin](https://github.com/armour/vue-typescript-admin-template) (Credits: [PanJiaChen](https://github.com/PanJiaChen))
