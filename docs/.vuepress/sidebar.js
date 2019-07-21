@@ -13,6 +13,7 @@ const sidebar = {
   ],
   'advanced': [
     '/guide/advanced/cors',
+    '/guide/advanced/lazy-loading',
     '/guide/advanced/remove-unused-components'
   ],
   'components': [

@@ -26,7 +26,7 @@ footer: MIT Licensed | Copyright © 2019-present Armour
 git clone https://github.com/armour/vue-typescript-admin-template.git
 
 # 进入项目目录
-cd vue-typescript-admin-templat
+cd vue-typescript-admin-template
 
 # 安装依赖
 yarn # 或者 npm install
