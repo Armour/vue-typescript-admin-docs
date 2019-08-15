@@ -1,7 +1,7 @@
 # 常见问题
 
 ::: tip
-提问之前，请先查阅下面的常见问题。
+开 issue 提问之前，请先查阅下面的常见问题。
 :::
 
 ## vue-typescript-admin-template, vue-element-admin 和 vue-admin-template 有什么区别?
@@ -11,11 +11,9 @@
 
 [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)(本项目) 是基于 typescript 重写的版本, [master](https://github.com/Armour/vue-typescript-admin-template/tree/master) 分支对应着 vue-element-admin 的完整功能，而 [minimal](https://github.com/Armour/vue-typescript-admin-template/tree/minimal) 分支对应着 vue-admin-template 的基础功能。
 
-## 首先有任何报错，最简单的方法是把报错信息复制到浏览器里面搜索一下
+## 遇到不懂的问题第一件要做的事
 
-[google 点我](http://lmgtfy.com/?q=%E6%90%9C%E4%B8%80%E6%90%9C)
-
-[百度点我](http://www.baidu-x.com/?q=%E6%90%9C%E4%B8%80%E6%90%9C)
+自己动手把**报错信息的核心部分**先复制到浏览器里面搜索一下，可以使用 Google / 百度 / Bing 等搜索引擎。
 
 ## 代码下载慢？
 
@@ -27,14 +25,14 @@ npm 或者 github 有时候因为中国墙的原因，网速会不稳定。有�
 npm install --registry=https://registry.npm.taobao.org
 ```
 
-- 使用 yarn 代替 npm
+- 尝试使用 yarn 代替 npm
 
   - [yarn 介绍](https://github.com/yarnpkg/yarn)
   - [安装](https://yarn.bootcss.com/docs/install/#mac-stable)
 
   `yarn install`
 
-- 自己了解一下如何科学上网
+- 了解一下如何科学上网
 
 ## npm install 总是失败？
 
@@ -89,20 +87,20 @@ module.exports = {
 
 ## 图片 background url() 引用问题？
 
-https://github.com/vuejs/vue-loader/issues/481
+[https://github.com/vuejs/vue-loader/issues/481](https://github.com/vuejs/vue-loader/issues/481)
 
-https://github.com/vuejs/vue-cli/issues/112
+[https://github.com/vuejs/vue-cli/issues/112](https://github.com/vuejs/vue-cli/issues/112)
 
 ## @ 或者如为什么他的项目可以`src/xxx/` 这样写，而我的却报路径错误？
 
 这种情况很有可能人家在配置了 webpack 的 alias
 
-`@` 是 webpack 的 [alias](https://webpack.js.org/configuration/resolve/#resolve-alias) 不懂得请自行研究。
+`@` 是 webpack 的 [alias](https://webpack.docschina.org/configuration/resolve/#resolve-alias) 不懂得请自行研究。
 
-## can't not find 'xxModule' - 找不到某些依赖或者模块
+## Can't not find 'xxx Module' - 找不到某些依赖或者模块
 
 这种情况一般报错信息可以看到是哪个包抛出的信息.
-一般卸载这个模块,安装重新安装下即可.
+一般卸载这个模块（如果已经安装了）, 用 npm 重新安装下即可.
 
 ## 我用了 axios , 为什么 IE 浏览器不识别(IE9+)
 
@@ -118,7 +116,3 @@ require("es6-promise").polyfill();
 ## 其它任何关于 vue 的问题 ？
 
 请你首先仔细阅读 vue [官方文档](https://cn.vuejs.org/index.html), 但部分问题其实看报错就能知道原因了！
-
-## 辅助文章
-
-[Vue 脱坑记 - 查漏补缺(汇总下群里高频询问的 xxx 及给出不靠谱的解决方案)](https://juejin.im/post/59fa9257f265da43062a1b0e)

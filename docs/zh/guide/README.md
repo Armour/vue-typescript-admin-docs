@@ -1,7 +1,7 @@
 # 介绍
 
 [![Vue](https://img.shields.io/badge/vue-2.6.10-brightgreen.svg)](https://github.com/vuejs/vue)
-[![Element-ui](https://img.shields.io/badge/element--ui-2.8.2-brightgreen.svg)](https://github.com/ElemeFE/element)
+[![Element-ui](https://img.shields.io/badge/element--ui-2.11.1-brightgreen.svg)](https://github.com/ElemeFE/element)
 [![Build Status](https://circleci.com/gh/Armour/vue-typescript-admin-template/tree/master.svg?style=shield)](https://circleci.com/gh/Armour/vue-typescript-admin-template/tree/master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Template from jarvis](https://img.shields.io/badge/Hi-Jarvis-ff69b4.svg)](https://github.com/Armour/Jarvis)
@@ -18,7 +18,7 @@
 相关项目:
 - Javascript 集成样例: [vue-element-admin](https://github.com/armour/vue-typescript-admin-template) (鸣谢: [PanJiaChen](https://github.com/PanJiaChen))
 - Javascript 基础摸板: [vue-admin-template](https://github.com/PanJiaChen/vue-admin-template) (鸣谢: [PanJiaChen](https://github.com/PanJiaChen))
-  :::
+:::
 
 ## 功能
 
@@ -73,12 +73,12 @@
   - 复杂表格
 
 - Excel
-  - 导出excel
-  - 导入excel
-  - 前端可视化excel
+  - 导出 excel
+  - 导入 excel
+  - 前端可视化 excel
 
 - Zip
-  - 导出zip
+  - 导出 zip
 
 - PDF
   - 下载 pdf

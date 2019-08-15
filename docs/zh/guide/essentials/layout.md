@@ -19,13 +19,13 @@
 `vue-typescript-admin-template` 中大部分页面都是基于这个 `layout` 的，除了个别页面如：`login` , `404`, `401` 等页面没有使用该`layout`。如果你想在一个项目中有多种不同的`layout`也是很方便的，只要在一级路由那里选择不同的`layout`组件就行。
 
 ```js
-// Without layout
+// 不含 layout
 {
   path: '/401',
   component: () => import('@/views/error-page/401.vue')
 }
 
-// With layout
+// 含有 layout
 {
   path: '/documentation',
   // 你可以选择不同的layout组件
@@ -70,23 +70,23 @@
 
 <img :src="$withBase('/images/share-router.jpeg')" alt="共享路由">
 
-`创建`和`编辑`的页面使用的是同一个 component，默认情况下这两个页面切换时并不会触发 vue 的 created 或者 mounted 钩子，[官方说](https://router.vuejs.org/zh/guide/advanced/data-fetching.html#%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96)你可以通过 watch $route 的变化来进行处理，但说真的还是蛮麻烦的。后来发现其实可以简单的在 `router-view` 上加上一个唯一的 key，来保证路由切换时都会重新渲染触发钩子了。这样简单的多了。
+`创建` 和 `编辑` 的页面使用的是同一个 component，默认情况下这两个页面切换时并不会触发 vue 的 created 或者 mounted 钩子，[官方文档说](https://router.vuejs.org/zh/guide/advanced/data-fetching.html#%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96)你可以通过 watch $route 的变化来进行处理，但说真的还是蛮麻烦的。后来发现其实可以简单的在 `router-view` 上加上一个唯一的 key，来保证路由切换时都会重新渲染触发钩子了，这样简单多了。
 
-```js
-<router-view :key="key"></router-view>
-
-computed: {
-  key() {
-    // 只要保证 key 唯一性就可以了，保证不同页面的 key 不相同
-    return this.$route.path
-  }
- }
+```html
+<router-view :key="key" />
 ```
 
-::: tip
+```js
+get key() {
+  // 只要保证 key 唯一性就可以了，保证不同页面的 key 不相同
+  return this.$route.path
+}
+```
+
+::: tip 示例
 或者可以像本项目中 `editForm` 和 `createForm` 那样声明两个不同的 view 但引入同一个 component。
 
-示例代码：[@/views/example](https://github.com/armour/vue-typescript-admin-template/tree/master/src/views/example)
+代码：[@/views/example](https://github.com/armour/vue-typescript-admin-template/tree/master/src/views/example)
 :::
 
 ```html
@@ -94,6 +94,7 @@ computed: {
 <template>
   <article-detail :is-edit="false" />
 </template>
+
 <script lang="ts">
 import ArticleDetail from './components/ArticleDetail.vue'
 </script>
@@ -102,6 +103,7 @@ import ArticleDetail from './components/ArticleDetail.vue'
 <template>
   <article-detail :is-edit="true" />
 </template>
+
 <script lang="ts">
 import ArticleDetail from './components/ArticleDetail.vue'
 </script>
@@ -111,4 +113,4 @@ import ArticleDetail from './components/ArticleDetail.vue'
 
 `element-ui` 官方对自己的定位是桌面端后台框架，而且对于管理后台这种重交互的项目来说是不能通过简单的适配来满足桌面端和移动端两端不同的交互，所以真要做移动版后台，建议重新做一套系统。
 
-所以本项目也不会适配移动端，只是用`media query`做了一点简单的响应式布局，有需求请自行修改。
+所以本项目也不会适配移动端，只是用 `media query` 做了一点简单的响应式布局，有需求请自行修改。

@@ -6,7 +6,7 @@
 
 路由和侧边栏是组织起一个后台应用的关键骨架。
 
-本项目侧边栏和路由是绑定在一起的，所以你只要在 `@/router/index.js` 下面配置对应的路由，侧边栏就能动态的生成了。大大减轻了手动重复编辑侧边栏的工作量。当然这样就需要在配置路由的时候遵循一些约定的规则。
+本项目侧边栏和路由是绑定在一起的，所以你只要在 `@/router/index.ts` 下面配置对应的路由，侧边栏就能动态的生成了。大大减轻了手动重复编辑侧边栏的工作量。当然这样就需要在配置路由的时候遵循一些约定的规则。
 
 ## 配置项
 
@@ -100,13 +100,13 @@ meta: {
 
 这里的路由分为两种，`constantRoutes` 和 `asyncRoutes`。
 
-**constantRoutes：** 代表那些不需要动态判断权限的路由，如登录页、404、等通用页面。
+**constantRoutes：** 不需要动态判断权限的路由，如登录页、404、等通用页面。
 
-**asyncRoutes：** 代表那些需求动态判断权限并通过 `addRoutes` 动态添加的页面。
+**asyncRoutes：** 需求动态判断权限并通过 `addRoutes` 动态添加的页面。
 
 具体的会在 [权限验证](permission.md) 页面介绍。
 
-::: tip
+::: tip 路由懒加载
 这里所有的路由页面都使用 `路由懒加载` 了 ，具体介绍见[文档](/zh/guide/advanced/lazy-loading.html)
 
 如果你想了解更多关于 browserHistory 和 hashHistory，请参看 [构建和发布](/zh/guide/essentials/deploy.html)。
@@ -115,7 +115,7 @@ meta: {
 其它的配置和 [vue-router](https://router.vuejs.org/zh-cn/) 官方并没有区别，自行查看文档。
 
 ::: warning 注意事项
-如果这里有一个需要非常注意的地方就是 `404` 页面一定要最后加载，如果放在 constantRoutes 一同声明了 `404` ，后面的所有页面都会被拦截到`404`
+如果这里有一个需要非常注意的地方就是 `404` 页面一定要最后加载，如果放在 constantRoutes 一同声明了 `404` ，后面的所有页面都会被拦截到 `404`
 :::
 
 ## 侧边栏
@@ -183,14 +183,14 @@ meta: {
 ```
 
 ::: tip unique-opened
-你可以在[Sidebar/index.vue](https://github.com/armour/vue-typescript-admin-template/blob/master/src/layout/components/Sidebar/index.vue)中设置 `unique-opened` 来控制侧边栏，是否只保持一个子菜单的展开。
+你可以在 [Sidebar/index.vue](https://github.com/armour/vue-typescript-admin-template/blob/master/src/layout/components/Sidebar/index.vue) 中设置 `unique-opened` 来控制侧边栏，是否只保持一个子菜单的展开。
 :::
 
 ## 多级目录(嵌套路由)
 
 如果你的路由是多级目录，如本项目 [@/views/nested](https://github.com/armour/vue-typescript-admin-template/tree/master/src/views/nested) 那样， 有三级路由嵌套的情况下，不要忘记还要手动在二级目录的根文件下添加一个 `<router-view>`。
 
-如：[@/views/nested/menu1/index.vue](https://github.com/armour/vue-typescript-admin-template/blob/master/src/views/nested/menu1/index.vue)，原则上有多少级路由嵌套就需要多少个`<router-view>`。
+如：[@/views/nested/menu1/index.vue](https://github.com/armour/vue-typescript-admin-template/blob/master/src/views/nested/menu1/index.vue)，原则上有多少级路由嵌套就需要多少个 `<router-view>`。
 
 ## 点击侧边栏 刷新当前路由
 
@@ -220,7 +220,7 @@ ps:不要忘了在 `router-view` 加上一个特定唯一的 `key`，如 `<route
 
 <img :src="$withBase('/images/resize-text.jpg')" alt="改变字体大小">
 
-点击图片所示的全局 size 大小切换按钮，你会发现 页面 `app-main` 区域进行了刷新。它就是运用了重定向到 `Redirect` 页面之后再重定向回原始页面的方法。
+点击图片所示的全局 size 大小切换按钮，你会发现页面 `app-main` 区域进行了刷新。它就是运用了重定向到 `Redirect` 页面之后再重定向回原始页面的方法。
 
 点击的时候重定向页面至 `/redirect`
 
@@ -234,10 +234,9 @@ this.$nextTick(() => {
 })
 ```
 
-`redirect` 页面在重定向回原始页面
+`redirect` 页面再重定向回原始页面
 
 ```js
-// https://github.com/armour/vue-typescript-admin-template/blob/master/src/views/redirect/index.vue
 created() {
   const { params, query } = this.$route
   const { path } = params
@@ -249,6 +248,10 @@ render() {
 }
 ```
 
+::: tip 代码地址
+[@/views/redirect/index.vue](https://github.com/armour/vue-typescript-admin-template/blob/master/src/views/redirect/index.vue)
+:::
+
 ## 面包屑
 
 本项目中也封装了一个面包屑导航，它也是通过 `watch $route` 变化动态生成的。它和 menu 也一样，也可以通过之前那些配置项控制一些路由在面包屑中的展现。大家也可以结合自己的业务需求增改这些自定义属性。比如可以在路由中声明`breadcrumb:false`，让其不在 breadcrumb 面包屑显示。
@@ -256,7 +259,7 @@ render() {
 <img :src="$withBase('/images/breadcrumb.gif')" alt="面包屑">
 
 ::: tip 代码地址
-[@/components/Breadcrumb](https://github.com/armour/vue-typescript-admin-template/blob/master/src/components/Breadcrumb/index.vue)
+[@/components/Breadcrumb/index.vue](https://github.com/armour/vue-typescript-admin-template/blob/master/src/components/Breadcrumb/index.vue)
 :::
 
 ## 侧边栏滚动问题
@@ -276,7 +279,7 @@ overflow-y: scroll;
 所以现版本中使用了 `el-scrollbar` 来处理侧边栏滚动问题。
 
 ::: tip 代码地址
-[@/components/Sidebar](https://github.com/armour/vue-typescript-admin-template/blob/master/src/layout/components/Sidebar/index.vue)
+[@/components/Sidebar/index.vue](https://github.com/armour/vue-typescript-admin-template/blob/master/src/layout/components/Sidebar/index.vue)
 :::
 
 ## 侧边栏 外链

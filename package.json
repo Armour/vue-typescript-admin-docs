@@ -10,8 +10,8 @@
   },
   "devDependencies": {
     "prettier": "1.18.2",
-    "vuepress": "1.0.2",
-    "lint-staged": "9.0.2"
+    "vuepress": "1.0.3",
+    "lint-staged": "9.2.1"
   },
   "bugs": {
     "url": "https://github.com/armour/vue-typescript-admin-docs/issues"
