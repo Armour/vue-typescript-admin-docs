@@ -279,7 +279,7 @@ overflow-y: scroll;
 所以现版本中使用了 `el-scrollbar` 来处理侧边栏滚动问题。
 
 ::: tip 代码地址
-[@/components/Sidebar/index.vue](https://github.com/armour/vue-typescript-admin-template/blob/master/src/layout/components/Sidebar/index.vue)
+[@/layout/components/Sidebar/index.vue](https://github.com/armour/vue-typescript-admin-template/blob/master/src/layout/components/Sidebar/index.vue)
 :::
 
 ## 侧边栏 外链
